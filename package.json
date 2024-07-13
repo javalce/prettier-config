@@ -1,14 +1,10 @@
 {
   "name": "@javalce/prettier-config",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "prepare": "husky"
-  },
+  "description": "Javier's Prettier configuration",
   "keywords": [
     "prettier"
   ],
-  "description": "Javier's Prettier configuration",
   "homepage": "https://github.com/javalce/prettier-config#readme",
   "bugs": {
     "url": "https://github.com/javalce/prettier-config/issues"
@@ -19,14 +15,38 @@
   },
   "license": "MIT",
   "author": "Javier Valero <javalce29@gmail.com>",
-  "publishConfig": {
-    "access": "public"
+  "main": "./src/index.js",
+  "files": [
+    "src/index.js"
+  ],
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
   },
-  "dependencies": {},
+  "lint-staged": {
+    "*": "prettier -w --ignore-unknown"
+  },
+  "prettier": "./src/index.js",
+  "dependencies": {
+    "prettier-plugin-packagejson": "^2.5.0"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2"
+    "prettier": "^3.3.2"
+  },
+  "peerDependencies": {
+    "prettier": ">=3.0.0 <4"
+  },
+  "peerDependenciesMeta": {
+    "prettier": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
