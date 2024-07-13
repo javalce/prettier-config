@@ -22,11 +22,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.7"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2"
   }
