@@ -20,10 +20,12 @@
     "src"
   ],
   "scripts": {
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -t v -p angular && git add CHANGELOG.md",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky",
-    "release": "bumpp && pnpm publish"
+    "release": "bumpp && pnpm publish",
+    "version": "pnpm changelog"
   },
   "lint-staged": {
     "*": "prettier -w --ignore-unknown"
@@ -36,6 +38,7 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "bumpp": "^9.4.1",
+    "conventional-changelog-cli": "^5.0.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2"
