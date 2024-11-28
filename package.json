@@ -1,6 +1,6 @@
 {
   "name": "@javalce/prettier-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Javier's Prettier configuration",
   "keywords": [
     "prettier"
