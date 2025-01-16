@@ -15,12 +15,28 @@
   },
   "license": "MIT",
   "author": "Javier Valero <javalce29@gmail.com>",
-  "main": "./src/index.js",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "import": "./dist/config.js",
+      "require": "./dist/config.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
+    "build": "tsup",
     "changelog": "conventional-changelog -i CHANGELOG.md -s -t v -p angular && git add CHANGELOG.md",
+    "check-exports": "attw --pack .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky",
@@ -30,18 +46,21 @@
   "lint-staged": {
     "*": "prettier -w --ignore-unknown"
   },
-  "prettier": "./src/index.js",
+  "prettier": "./dist/index.js",
   "dependencies": {
     "prettier-plugin-packagejson": "^2.5.7"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.3",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "bumpp": "^9.10.1",
     "conventional-changelog-cli": "^5.0.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.4.0",
-    "prettier": "^3.4.2"
+    "lint-staged": "^15.4.1",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
     "prettier": ">=3.0.0 <4"
