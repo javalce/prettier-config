@@ -1,3 +1,10 @@
+# [2.0.0](https://github.com/javalce/prettier-config/compare/v1.0.3...v2.0.0) (2025-01-17)
+
+### Features
+
+- add Prettier configuration in TypeScript and remove legacy JavaScript config ([5989dc9](https://github.com/javalce/prettier-config/commit/5989dc9f404c7d66a50db54af0938664d4605434))
+- add TypeScript configuration and tsup build setup ([ce6fc94](https://github.com/javalce/prettier-config/commit/ce6fc94fb3b0e4a9f879525a95e6f6c985357a89))
+
 ## [1.0.3](https://github.com/javalce/prettier-config/compare/v1.0.2...v1.0.3) (2024-11-28)
 
 ## [1.0.2](https://github.com/javalce/prettier-config/compare/v1.0.1...v1.0.2) (2024-09-20)
