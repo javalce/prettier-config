@@ -1,28 +1,21 @@
 import { type Config } from 'prettier';
 
-/**
- * Some of Prettier's defaults can be overridden by an EditorConfig file. We
- * define those here to ensure that doesn't happen.
- *
- * See: https://github.com/prettier/prettier/blob/main/docs/configuration.md#editorconfig
- */
-const overridableDefaults: Config = {
-  printWidth: 100,
-  tabWidth: 2,
-  useTabs: false,
-  endOfLine: 'lf',
-};
-
 export function defineConfig(config?: Config): Config {
+  const { plugins = [], overrides = [], ...customConfig } = config ?? {};
+
   return {
-    ...overridableDefaults,
+    printWidth: 100,
+    tabWidth: 2,
+    useTabs: false,
+    endOfLine: 'lf',
     trailingComma: 'all',
     semi: true,
     singleQuote: true,
     jsxSingleQuote: true,
     bracketSpacing: true,
     arrowParens: 'always',
-    ...config,
-    plugins: ['prettier-plugin-packagejson', ...(config?.plugins ?? [])],
+    ...customConfig,
+    plugins: ['prettier-plugin-packagejson', ...plugins],
+    overrides,
   };
 }
