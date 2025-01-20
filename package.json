@@ -45,7 +45,6 @@
   "lint-staged": {
     "*": "prettier -w --ignore-unknown"
   },
-  "prettier": "./dist/index.js",
   "dependencies": {
     "prettier-plugin-packagejson": "^2.5.7"
   },
