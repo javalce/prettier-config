@@ -6,6 +6,7 @@ This is my personal Prettier configuration.
   - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
+    - [Extending the shared configuration](#extending-the-shared-configuration)
 
 ## Features
 
@@ -21,7 +22,7 @@ This is my personal Prettier configuration.
 - `arrowParens`: 'always'
 - `plugins`: ['prettier-plugin-packagejson']
 
-The `prettier-plugin-packagejson` plugin is used to sort the keys ofm a `package.json` file to keep them in a consistent order and make it easier to read.
+The `prettier-plugin-packagejson` plugin is used to sort the keys of a `package.json` file to keep them in a consistent order and make it easier to read.
 
 ## Installation
 
@@ -43,50 +44,32 @@ yarn add --dev prettier @javalce/prettier-config
 
 ## Usage
 
-To use this config, set the following in `package.json`.
+This shared configuration is exported as a function that receives an optional object with the configuration to be merged with the shared configuration.
 
-```json
-{
-  "prettier": "@javalce/prettier-config"
-}
-```
+The following example to configure Prettier with this shared configuration is using the `prettier.config.js` file using ES Modules, because recently, packages, like eslint, are moving its configuration files from `rc` files to `*.config.js` files.
 
-or create a `.prettierrc.cjs` file with the following content:
+But you can still use the `.prettierrc.js` file if you prefer. Also, you can use CommonJS if you prefer.
 
 ```js
-const prettierConfig = require('@javalce/prettier-config');
+import { defineConfig } from '@javalce/prettier-config';
 
-module.exports = {
-  prettierConfig,
-};
+export default defineConfig();
 ```
 
-If you want to extend the shared config, you can do so by creating a `.prettierrc.cjs` file with the following content:
+### Extending the shared configuration
+
+If you want to extend the shared config or override some of its properties, you can pass an object to the `defineConfig` function.
+
+> [!IMPORTANT]
+> The `plugins` property is merged with the shared configuration, not replaced, so it will use the plugins from the shared configuration and the plugins you pass.
 
 ```js
-const prettierConfig = require('@javalce/prettier-config');
+import { defineConfig } from '@javalce/prettier-config';
 
-module.exports = {
-  ...prettierConfig,
-  // ...yourPrettierConfig
+export default defineConfig({
+  semi: false,
   plugins: [
-    ...prettierConfig.plugins,
     // ...yourPlugins
   ],
-};
-```
-
-or by using ESM (`.prettierrc.mjs` or `prettierrc.js` if the `package.json` has `"type": "module"`):
-
-```js
-import prettierConfig from '@javalce/prettier-config';
-
-export default {
-  ...prettierConfig,
-  // ...yourPrettierConfig
-  plugins: [
-    ...prettierConfig.plugins,
-    // ...yourPlugins
-  ],
-};
+});
 ```
