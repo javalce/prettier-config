@@ -2,6 +2,6 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, .gitignore, .node-version, .editorconfig, bump.config.js, tsup.config.ts, commitlint.config.js, .prettierignore, prettier.config.js"
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, .gitignore, .node-version, .editorconfig, *.config.js, *.config.ts, .prettierignore"
   }
 }
