@@ -1,3 +1,5 @@
+# [2.2.0](https://github.com/javalce/prettier-config/compare/v2.1.0...v2.2.0) (2025-05-29)
+
 # [2.1.0](https://github.com/javalce/prettier-config/compare/v2.0.0...v2.1.0) (2025-01-20)
 
 # [2.0.0](https://github.com/javalce/prettier-config/compare/v1.0.3...v2.0.0) (2025-01-17)
