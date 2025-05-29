@@ -38,6 +38,7 @@
     "check-exports": "attw --pack .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "prepack": "pnpm build",
     "prepare": "husky",
     "release": "bumpp && pnpm publish",
     "version": "pnpm changelog"
