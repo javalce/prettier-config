@@ -1,21 +1,15 @@
-import { type Config } from 'prettier';
+import type { Config } from 'prettier';
 
-export function defineConfig(config?: Config): Config {
-  const { plugins = [], overrides = [], ...customConfig } = config ?? {};
-
-  return {
-    printWidth: 100,
-    tabWidth: 2,
-    useTabs: false,
-    endOfLine: 'lf',
-    trailingComma: 'all',
-    semi: true,
-    singleQuote: true,
-    jsxSingleQuote: true,
-    bracketSpacing: true,
-    arrowParens: 'always',
-    ...customConfig,
-    plugins: ['prettier-plugin-packagejson', ...plugins],
-    overrides,
-  };
-}
+export default {
+  printWidth: 100,
+  tabWidth: 2,
+  useTabs: false,
+  endOfLine: 'lf',
+  trailingComma: 'all',
+  semi: true,
+  singleQuote: true,
+  jsxSingleQuote: true,
+  bracketSpacing: true,
+  arrowParens: 'always',
+  plugins: ['prettier-plugin-packagejson'],
+} satisfies Config;

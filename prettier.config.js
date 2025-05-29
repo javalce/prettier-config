@@ -1,3 +1,6 @@
-import { defineConfig } from './dist/index.js';
+//@ts-check
 
-export default defineConfig();
+import prettierConfig from './dist/index.js';
+
+/** @type {import('prettier').Config} */
+export default prettierConfig;
