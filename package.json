@@ -33,7 +33,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "changelog": "conventional-changelog -i CHANGELOG.md -s -t v -p angular && git add CHANGELOG.md",
     "check-exports": "attw --pack .",
     "format": "prettier --write .",
@@ -58,7 +58,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
-    "tsup": "^8.5.0",
+    "tsdown": "^0.15.11",
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
