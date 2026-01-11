@@ -1,3 +1,9 @@
+## [2.2.2](https://github.com/javalce/prettier-config/compare/v2.2.1...v2.2.2) (2026-01-11)
+
+### Bug Fixes
+
+- replace import of prettier-plugin-packagejson with string reference ([0a40c7f](https://github.com/javalce/prettier-config/commit/0a40c7f4349ef22c41c4c01ebc95c04b6288b031))
+
 ## [2.2.1](https://github.com/javalce/prettier-config/compare/v2.2.0...v2.2.1) (2026-01-11)
 
 ### Bug Fixes
