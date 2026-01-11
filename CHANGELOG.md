@@ -1,3 +1,9 @@
+## [2.2.1](https://github.com/javalce/prettier-config/compare/v2.2.0...v2.2.1) (2026-01-11)
+
+### Bug Fixes
+
+- update module export types for ESM compatibility ([4e96a4c](https://github.com/javalce/prettier-config/commit/4e96a4c9c200da7d3e73a283f308a2fe257920cb))
+
 # [2.2.0](https://github.com/javalce/prettier-config/compare/v2.1.0...v2.2.0) (2025-05-29)
 
 # [2.1.0](https://github.com/javalce/prettier-config/compare/v2.0.0...v2.1.0) (2025-01-20)
