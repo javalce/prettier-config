@@ -1,5 +1,8 @@
 import type { Config } from 'prettier';
 
+// @ts-expect-error – no types available
+import prettierPluginPackagejson from 'prettier-plugin-packagejson';
+
 export default {
   printWidth: 100,
   tabWidth: 2,
@@ -11,5 +14,5 @@ export default {
   jsxSingleQuote: true,
   bracketSpacing: true,
   arrowParens: 'always',
-  plugins: ['prettier-plugin-packagejson'],
+  plugins: [prettierPluginPackagejson],
 } satisfies Config;
