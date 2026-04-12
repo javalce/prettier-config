@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/release-it/schema/release-it.json",
+  "git": {
+    "commitMessage": "release: v${version}",
+    "tagAnnotation": "v${version}"
+  },
+  "npm": {
+    "publish": true
+  },
+  "github": {
+    "release": false
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "infile": "CHANGELOG.md",
+      "ignoreRecommendedBump": true,
+      "preset": {
+        "name": "angular"
+      }
+    }
+  }
+}

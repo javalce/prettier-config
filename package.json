@@ -34,14 +34,13 @@
   ],
   "scripts": {
     "build": "tsdown",
-    "changelog": "conventional-changelog -i CHANGELOG.md -s -t v -p angular && git add CHANGELOG.md",
     "check-exports": "attw --pack .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepack": "pnpm build",
     "prepare": "husky",
-    "release": "bumpp && pnpm publish",
-    "version": "pnpm changelog"
+    "release": "release-it",
+    "release:test": "release-it --dry-run"
   },
   "lint-staged": {
     "*": "prettier -w --ignore-unknown"
@@ -53,12 +52,12 @@
     "@arethetypeswrong/cli": "^0.18.2",
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
+    "@release-it/conventional-changelog": "^10.0.6",
     "@types/node": "^24.12.2",
-    "bumpp": "^10.4.1",
-    "conventional-changelog-cli": "^5.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "prettier": "^3.8.2",
+    "release-it": "^19.2.4",
     "tsdown": "^0.21.7",
     "typescript": "^5.9.3"
   },
