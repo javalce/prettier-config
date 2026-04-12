@@ -1,3 +1,7 @@
+# Changelog
+
+## [2.2.3](https://github.com/javalce/prettier-config/compare/v2.2.2...v2.2.3) (2026-04-12)
+
 ## [2.2.2](https://github.com/javalce/prettier-config/compare/v2.2.1...v2.2.2) (2026-01-11)
 
 ### Bug Fixes
