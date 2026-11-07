@@ -38,9 +38,13 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepack": "pnpm build",
-    "prepare": "husky",
+    "prepare": "simple-git-hooks",
     "release": "release-it",
     "release:test": "release-it --dry-run"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx commitlint --edit $1"
   },
   "lint-staged": {
     "*": "prettier -w --ignore-unknown"
@@ -54,10 +58,10 @@
     "@commitlint/config-conventional": "^21.2.4",
     "@release-it/conventional-changelog": "^12.0.2",
     "@types/node": "^26.6.6",
-    "husky": "^9.1.7",
     "lint-staged": "^17.6.0",
     "prettier": "^3.9.10",
     "release-it": "^21.1.2",
+    "simple-git-hooks": "^2.14.0",
     "tsdown": "^0.23.7",
     "typescript": "^6.0.3"
   },
